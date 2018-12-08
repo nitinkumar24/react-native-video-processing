@@ -498,13 +498,13 @@ public class Trimmer {
     cmd.add("-c:v");
     cmd.add("libx264");
     cmd.add("-b:v");
-    cmd.add(Double.toString(averageBitrate/1000)+"K");
+    cmd.add("2048K");
     cmd.add("-bufsize");
-    cmd.add(Double.toString(averageBitrate/2000)+"K");
-    if ( width != 0 && height != 0 ) {
-      cmd.add("-vf");
-      cmd.add("scale=" + Integer.toString(width) + ":" + Integer.toString(height));
-    }
+    cmd.add("1024K");
+    // if ( width != 0 && height != 0 ) {
+    //   cmd.add("-vf");
+    //   cmd.add("scale=" + Integer.toString(width) + ":" + Integer.toString(height));
+    // }
 
     cmd.add("-preset");
     cmd.add("ultrafast");
